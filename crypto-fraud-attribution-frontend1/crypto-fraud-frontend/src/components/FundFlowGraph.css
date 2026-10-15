@@ -1,0 +1,248 @@
+
+.fund-flow-panel {
+  width: 100%;
+  margin-top: 24px;
+  padding: 20px;
+  background: #0b1220;
+  color: #e5e7eb;
+  border: 1px solid #263449;
+  border-radius: 16px;
+}
+
+.fund-flow-panel h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.graph-note {
+  color: #9ca3af;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.flow-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.flow-legend span {
+  padding: 6px 10px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.legend-suspect { color: #fecaca; }
+.legend-burner { color: #fde68a; }
+.legend-wallet { color: #bfdbfe; }
+.legend-vasp { color: #ddd6fe; }
+
+.flow-canvas {
+  overflow: auto;
+  border: 1px solid #263449;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle, #263449 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.flow-node polygon,
+.flow-node rect {
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.flow-suspect polygon {
+  fill: #421f2b;
+  stroke: #f87171;
+}
+
+.flow-burner polygon {
+  fill: #3b2d18;
+  stroke: #fbbf24;
+}
+
+.flow-wallet rect {
+  fill: #172b44;
+  stroke: #60a5fa;
+}
+
+.flow-vasp rect {
+  fill: #30204b;
+  stroke: #c084fc;
+}
+
+.node-title {
+  fill: #f9fafb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.node-address {
+  fill: #cbd5e1;
+  font-size: 11px;
+  font-family: monospace;
+}
+
+.node-small {
+  fill: #cbd5e1;
+  font-size: 10px;
+}
+
+.node-kicker {
+  fill: #d8b4fe;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.transfer-edge path {
+  fill: none;
+  stroke: #60a5fa;
+  stroke-width: 2;
+}
+
+.attribution-edge path {
+  fill: none;
+  stroke: #c084fc;
+  stroke-width: 1.7;
+  stroke-dasharray: 5 5;
+}
+
+.edge-label {
+  fill: #bfdbfe;
+  font-size: 10px;
+  font-weight: 700;
+  paint-order: stroke;
+  stroke: #0b1220;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.edge-sub-label {
+  fill: #94a3b8;
+  font-size: 9px;
+  paint-order: stroke;
+  stroke: #0b1220;
+  stroke-width: 3px;
+}
+
+.trace-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.trace-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  background: #121e30;
+  border: 1px solid #263449;
+  border-radius: 10px;
+}
+
+.trace-summary span {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.trace-summary strong {
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.trace-warnings {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #854d0e;
+  border-radius: 10px;
+  background: #2a2114;
+  color: #fde68a;
+  font-size: 13px;
+}
+
+.trace-warnings p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Intake form */
+
+.case-form {
+  display: grid;
+  gap: 14px;
+  max-width: 760px;
+  padding: 22px;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  background: #111827;
+  color: #f3f4f6;
+}
+
+.case-form h2 {
+  margin: 0;
+}
+
+.case-form label {
+  display: grid;
+  gap: 7px;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.case-form input,
+.case-form select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #0b1220;
+  color: white;
+  font: inherit;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.case-form button {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.case-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.form-error {
+  margin: 0;
+  color: #fca5a5;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .trace-summary,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .fund-flow-panel {
+    padding: 12px;
+  }
+}
