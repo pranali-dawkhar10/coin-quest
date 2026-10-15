@@ -1,0 +1,49 @@
+crypto-fraud-frontend/
+├── index.html
+├── public/
+│   ├── favicon.ico
+│   └── assets/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── RiskBadge.jsx
+│   │   │   └── Modal.jsx
+│   │   ├── graph/
+│   │   │   ├── NetworkGraph.jsx
+│   │   │   ├── NodeDetails.jsx
+│   │   │   └── GraphFilter.jsx
+│   │   ├── ai_copilot/
+│   │   │   ├── NarrativeBox.jsx
+│   │   │   └── ChatPanel.jsx
+│   │   └── reports/
+│   │       ├── ReportPreview.jsx
+│   │       └── NoticeForm.jsx
+│   ├── hooks/
+│   │   ├── useGraphData.js
+│   │   └── useCaseDetails.js
+│   ├── pages/
+│   │   ├── IntakePage.jsx
+│   │   ├── DashboardPage.jsx
+│   │   ├── CaseDetailPage.jsx
+│   │   ├── VaspDirectoryPage.jsx
+│   │   └── VerificationPage.jsx
+│   ├── services/
+│   │   ├── api.js
+│   │   └── websocket.js
+│   ├── store/
+│   │   ├── caseStore.js
+│   │   └── graphStore.js
+│   ├── styles/
+│   │   └── index.css
+│   ├── utils/
+│   │   ├── formatters.js
+│   │   └── graphHelpers.js
+│   ├── App.jsx
+│   └── index.jsx
+├── .env.example
+├── Dockerfile
+├── package.json
+└── tailwind.config.js
